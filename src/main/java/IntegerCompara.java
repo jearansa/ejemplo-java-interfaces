@@ -1,64 +1,64 @@
 
 // La cabecera de la clase IntegerCompara
 // ahora usa la palabra clave "implements"
-// para declarar su relación con la interface
+// para declarar su relaciÃ³n con la interface
 // "Compara"
 
-// Aunque éste no es el caso, una clase puede heredar
+// Aunque Ã©ste no es el caso, una clase puede heredar
 // de otra, e implementar varias interfaces, que
-// aparecerían separadas por comas
+// aparecerÃ­an separadas por comas
 
 // Se puede observar que no declaramos la clase
 // como "abstract", lo cual nos obliga a dar una
-// implementación de todos los métodos de la
+// implementaciÃ³n de todos los mÃ©todos de la
 // interface "Compara", si no obtendremos un error
-// de compilación
+// de compilaciÃ³n
 
 public class IntegerCompara implements Compara{
-	// Por comodidad, nos declaramos
-	// el atributo "dato" como "public":
-	public Integer dato;
+    // Por comodidad, nos declaramos
+    // el atributo "dato" como "public":
+    public Integer dato;
 
-	public IntegerCompara (int i){
-		super();
-		this.dato = Integer.valueOf (i);
-	}
+    public IntegerCompara (int i){
+        super();
+        this.dato = Integer.valueOf (i);
+    }
 
-	// Redefinimos todos los métodos de la interface "Compara";
-	// Es importante observar el modificador "public"
-	// en todos los métodos redefinidos de la interface,
-	// que allí omitíamos, pero que en la clase
-	// debemos añadir (si no serían "package")
-	public boolean mayorQue (Compara i1){
-		boolean aux = false;
-		if (i1 instanceof IntegerCompara){
-			IntegerCompara ic = (IntegerCompara) i1;
-			aux = (this.dato > ic.dato);
-		}
-		return aux;
-	}
+    // Redefinimos todos los mÃ©todos de la interface "Compara";
+    // Es importante observar el modificador "public"
+    // en todos los mÃ©todos redefinidos de la interface,
+    // que allÃ­ omitÃ­amos, pero que en la clase
+    // debemos aÃ±adir (si no serÃ­an "package")
+    public boolean mayorQue (Compara i1){
+        boolean aux = false;
+        if (i1 instanceof IntegerCompara){
+            IntegerCompara ic = (IntegerCompara) i1;
+            aux = (this.dato > ic.dato);
+        }
+        return aux;
+    }
 
-	public boolean menorQue (Compara i1){
-		boolean aux = false;
-		if (i1 instanceof IntegerCompara){
-			IntegerCompara ic = (IntegerCompara) i1;
-			aux = (this.dato < ic.dato);
-		}
-		return aux;
-	}
+    public boolean menorQue (Compara i1){
+        boolean aux = false;
+        if (i1 instanceof IntegerCompara){
+            IntegerCompara ic = (IntegerCompara) i1;
+            aux = (this.dato < ic.dato);
+        }
+        return aux;
+    }
 
-	public boolean igualQue (Compara i1){
-		boolean aux = false;
-		if (i1 instanceof IntegerCompara){
-			IntegerCompara ic = (IntegerCompara) i1;
-			aux = (this.dato.equals( ic.dato ));
-		}
-		return aux;
-	}
-	// Redefinimos el método "toString(): String"
-	// para que muestre del objeto "dato" de forma adecuada,
-	// añadiendo un salto de línea
-	public String toString( ) {
-		return this.dato.toString( );
-	}
+    public boolean igualQue (Compara i1){
+        boolean aux = false;
+        if (i1 instanceof IntegerCompara){
+            IntegerCompara ic = (IntegerCompara) i1;
+            aux = (this.dato.equals( ic.dato ));
+        }
+        return aux;
+    }
+    // Redefinimos el mÃ©todo "toString(): String"
+    // para que muestre del objeto "dato" de forma adecuada,
+    // aÃ±adiendo un salto de lÃ­nea
+    public String toString( ) {
+        return this.dato.toString( );
+    }
 }
