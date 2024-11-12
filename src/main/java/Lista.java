@@ -45,7 +45,7 @@ public class Lista{
         StringBuffer n = new StringBuffer ("\nLa longitud de la lista es "
                 + this.tamaño + ":\n");
         for (int i = 0; i < this.tamaño; i++){
-            n.append ("\t El elemento " + this.v [i] + " esta en la lista \n");
+            n.append("\t El elemento ").append(this.v[i]).append(" esta en la lista \n");
         }
         return n.toString();
     }

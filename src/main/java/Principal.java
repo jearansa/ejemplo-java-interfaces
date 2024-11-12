@@ -13,9 +13,9 @@ public class Principal {
         // que serán construidos por medio de alguna de las clases
         // que implementen la interfaz:
 
-        Compara d1 = new IntegerCompara (5), d2 = new IntegerCompara (5), s1 = new StringCompara ("hola");
+        Compara i1 = new IntegerCompara (5), i2 = new IntegerCompara (5), s1 = new StringCompara ("hola");
 
-        System.out.println ("Comparación de objetos declarados Compara " + d1.mayorQue (d2));
+        System.out.println ("Comparación de objetos declarados Compara " + i1.mayorQue (i2));
         // 3. Declarar estructuras genéricas de los mismos;
         // atención, porque también podemos construir el array
         // por medio de la "interface", aunque la misma no
