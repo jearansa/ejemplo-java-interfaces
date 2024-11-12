@@ -32,6 +32,7 @@ public class Lista{
             aux = this.v [i].igualQue (c);
         }
         // Uso el valor de i al salir, muevo todos los elementos uno para atrás
+        // De esta forma el método valdrá también para la subclase "ListaOrdenada"
         for (int j = i; j < this.tamaño; j++){
             this.v [j-1] = this.v [j];
         }
@@ -41,7 +42,8 @@ public class Lista{
     }
 
     public String toString ( ){
-        StringBuffer n = new StringBuffer ("\nLa longitud de la lista es " + this.tamaño + ":\n");
+        StringBuffer n = new StringBuffer ("\nLa longitud de la lista es "
+                + this.tamaño + ":\n");
         for (int i = 0; i < this.tamaño; i++){
             n.append ("\t El elemento " + this.v [i] + " esta en la lista \n");
         }

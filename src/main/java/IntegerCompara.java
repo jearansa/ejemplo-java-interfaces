@@ -29,33 +29,30 @@ public class IntegerCompara implements Compara{
     // en todos los métodos redefinidos de la interface,
     // que allí omitíamos, pero que en la clase
     // debemos añadir (si no serían "package")
-    public boolean mayorQue (Compara i1){
+    public boolean mayorQue (Compara i){
         boolean aux = false;
-        if (i1 instanceof IntegerCompara){
-            IntegerCompara ic = (IntegerCompara) i1;
+        if (i instanceof IntegerCompara ic){
             aux = (this.dato > ic.dato);
         }
         return aux;
     }
 
-    public boolean menorQue (Compara i1){
+    public boolean menorQue (Compara i){
         boolean aux = false;
-        if (i1 instanceof IntegerCompara){
-            IntegerCompara ic = (IntegerCompara) i1;
+        if (i instanceof IntegerCompara ic){
             aux = (this.dato < ic.dato);
         }
         return aux;
     }
 
-    public boolean igualQue (Compara i1){
+    public boolean igualQue (Compara i){
         boolean aux = false;
-        if (i1 instanceof IntegerCompara){
-            IntegerCompara ic = (IntegerCompara) i1;
+        if (i instanceof IntegerCompara ic){
             aux = (this.dato.equals( ic.dato ));
         }
         return aux;
     }
-    // Redefinimos el método "toString(): String"
+    // Redefinimos el metodo "toString(): String"
     // para que muestre del objeto "dato" de forma adecuada,
     // añadiendo un salto de línea
     public String toString( ) {

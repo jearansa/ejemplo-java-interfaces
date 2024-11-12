@@ -64,7 +64,7 @@ public class Principal {
             l6.incluir (sd);
 
         }
-        // Haciendo uso del método "toString()"
+        // Haciendo uso del metodo "toString()"
         // de la clase Lista mostramos las listas por pantalla
         // Observa que los objetos aparecen o no ordenados,
         // dependiendo de la lista que usemos

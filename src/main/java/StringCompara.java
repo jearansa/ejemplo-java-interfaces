@@ -19,9 +19,9 @@ public class StringCompara implements Compara {
     // el atributo "dato" como "public":
     public String dato;
 
-    public StringCompara (String i){
+    public StringCompara (String s){
         super ( );
-        this.dato = i;
+        this.dato = s;
     }
 
     // Redefinimos todos los métodos de la interface "Compara";
@@ -29,35 +29,32 @@ public class StringCompara implements Compara {
     // en todos los métodos redefinidos de la interface,
     // que allí omitíamos, pero que en la clase
     // debemos añadir (si no serían "package")
-    public boolean mayorQue (Compara i1){
+    public boolean mayorQue (Compara c){
         boolean aux = false;
-        if (i1 instanceof StringCompara){
-            StringCompara ic = (StringCompara) i1;
-            aux = (this.dato.compareTo(ic.dato) > 0);
+        if (c instanceof StringCompara sc){
+            aux = (this.dato.compareTo(sc.dato) > 0);
         }
         return aux;
     }
 
-    public boolean menorQue (Compara i1){
+    public boolean menorQue (Compara c){
         boolean aux = false;
-        if (i1 instanceof StringCompara){
-            StringCompara ic = (StringCompara) i1;
-            aux = (this.dato.compareTo(ic.dato) < 0);
+        if (c instanceof StringCompara sc){
+            aux = (this.dato.compareTo(sc.dato) < 0);
         }
         return aux;
     }
 
-    public boolean igualQue (Compara i1){
+    public boolean igualQue (Compara c){
         boolean aux = false;
-        if (i1 instanceof StringCompara){
-            StringCompara ic = (StringCompara) i1;
-            aux = (this.dato.compareTo(ic.dato) == 0);
+        if (c instanceof StringCompara sc){
+            aux = (this.dato.compareTo(sc.dato) == 0);
         }
         return aux;
     }
-    // Redefinimos el método "toString(): String"
+    // Redefinimos el metodo "toString(): String"
     // para que muestre del objeto "dato" de forma adecuada
     public String toString(){
-        return this.dato.toString();
+        return this.dato;
     }
 }
